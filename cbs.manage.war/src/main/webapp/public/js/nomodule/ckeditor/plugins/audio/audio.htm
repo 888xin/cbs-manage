@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>插入/搜索音乐</title>
+	<script type="text/javascript" src="../../utils/form_utils.js"></script>
+	<link href="css/audio.css" rel="stylesheet" type="text/css" />
+</head>
+<body role="application">
+<div class="nav-tab">
+	<ul>
+		<li class="tab-li current"><a class="search-music" id="searchMusic">搜索音乐</a></li>
+		<li class="tab-li "><a class="insert-audio" id="insertMusic">插入音乐</a></li>
+	</ul>
+	<div class="clear"></div>
+	<div class="mceActionPanel">
+		<input type="submit" id="insert" class="insert disable-button"  name="insert" value="插入" />
+	</div>		
+</div>
+<div class="pannel-searchMP3" id="pannelSearchMP3" >
+       <div id="music_xiami" >
+       	<span class="music-tip">搜索音乐</span>
+       	<div class="wrap_music_search">
+       		<input id="music_search" placeholder="输入歌名、专辑或艺术家" class="music-search wide"  type="text" value="" autocomplete="off" spellcheck="false" />
+       	</div>
+       	<div class="music-preview" style="display: none;margin-top:1px;" >
+			<a class="close"  title="重新选择音乐">重新选择音乐</a>
+			<div class="post_music">
+				<img class="icon" src="http://static.l99.com/skin/default/images/pixel.gif" />
+				<div class="player player-single"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="music-loadding text_gray9">
+       		<img src="http://static.l99.com/skin/lifeix/images/loading.gif" />&nbsp;歌曲搜索中...
+       	</div>
+      </div>
+</div>
+   <div  class="pannel-insertMusic" id="pannelInsertMusic" style="display:none">
+   		<div class="wrap-insertMusic">
+	   		<span class="music-tip">插入地址</span>
+			<input id="src" placeholder="请输入mp3地址" name="src" type="text" value="" class="mceFocus" />
+		</div>
+		<div id="insert_preview" class="insert-preview" style="display:none"></div>
+   </div>
+<script type="text/javascript" src="http://static.l99.com/js/jquery/json2.js?v=20110808.js"></script> 
+<script type="text/javascript" src="http://static.l99.com/js/jquery/jquery-1.4.2.min.js?v=20110808.js"></script>
+<script type="text/javascript" src="js/audioSearch.js"></script>
+  
+<script type="text/javascript" >
+	(function(){
+	 	window.onload = function(){	 
+			$("#music_search").musicSearch();
+			
+			//切换搜索音乐	Tab
+			$("#searchMusic").click(function(){
+				if($(this).parent().hasClass("current"))
+					return;
+				$(".tab-li").removeClass("current")
+				$(this).parent().addClass("current");
+				$("#pannelSearchMP3").show();
+				$("#formAudio").hide();	
+				$("#pannelInsertMusic").hide();	
+				
+				$("#insert").removeClass("disable-button")
+				if(!isValidSearch())
+					$("#insert").addClass("disable-button")				
+			});
+			
+			//切换插入音乐Tab
+			$("#insertMusic").click(function(){
+				$(".tab-li").removeClass("current")
+				$(this).parent().addClass("current");			
+				$("#pannelSearchMP3").hide();
+				$("#pannelInsertMusic").show();
+				$("#insert").addClass("disable-button")
+				
+				$("#insert").removeClass("disable-button")
+				if(!isValidInsert())
+					$("#insert").addClass("disable-button")					
+			});
+			
+			//插入按钮
+			$("#insert").click(function(){
+				var currentTab = $(".current a")[0].id;
+				//插入音乐
+				if(currentTab == "searchMusic"){
+					if(!isValidSearch())
+						return;
+					createSearchContent();
+				}
+				else{
+					if(!isValidInsert())
+					   return false;
+					createInsertMp3Content();
+				}
+			});
+			//搜索地址是否有效
+			function isValidSearch(){
+				var musicUrl = $(".player-single embed").attr("src");
+				if(musicUrl == undefined )			
+					return false;					
+				else
+					return true;
+			}
+			//插入地址是否有效
+			function isValidInsert(){
+				var musicUrl = $("#src").val();
+				if( jQuery.trim(musicUrl) == '')
+					return false;
+				else 
+				    return true;		
+			}
+
+			//创建搜索插入的内容
+			function createSearchContent(){
+				var musicUrl = $(".player-single embed").attr("src");
+				var m = '<img width="290" height="33" data-mce-src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif"'+
+						' src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif" class="mceItemAudio mceItemMp3"'+
+						' data-mce-json="{\'type\':\'audio\',\'video\':{\'sources\':{}},\'params\':{\'src\':\''+musicUrl+'\',\'flashvars\':\'playerID=44584462&amp;soundFile=\',\'quality\':\'high\',\'wmode\':\'transparent\',\'object_html\':\' \' ,\'movie\':\'http://static.l99.com/tinyMCE/audioplayer.swf\'},\'width\':\'290\',\'height\':\'33\'}" />';				
+				var mp3 = $(m);
+				//$("#insertMusic").html(m);	
+				insertMusicToEditor(m);
+			}
+			
+			//创建插入mp3的内容			
+			function createInsertMp3Content(){
+				var musicUrl = $("#src").val();
+				musicUrl = "\'playerID=12345&soundFile="+musicUrl+"\'";
+				var eleMusic = ' <img width="290" height="33" data-mce-src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif"'+
+				  			   ' src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif" wmode="transparent" '+
+				  			   ' class="mceItemAudio mceItemMp3" data-mce-json="{\'type\':\'mp3\',\'video\':{},\'wmode\':\'transparent\',\'params\':'+
+				  			   '{\'src\':\'http://static.l99.com/tinyMCE/audioplayer.swf\',\'wmode\':\'transparent\',\'flashvars\':'+musicUrl+'},\'width\':\'290\',\'height\':\'33\'}" _moz_resizing="true" />';
+				//$("#insertMusic").html(eleMusic);
+				var mp3 = $(eleMusic);
+				insertMusicToEditor(eleMusic);
+			}
+			
+			//插入音乐到编辑器
+			function insertMusicToEditor(eleMusic){
+				parent.CKEDITOR.instances.elm1.insertHtml(eleMusic);
+				parent.CKEDITOR.instances.elm1.focus();
+				parent.CKEDITOR.dialog.getCurrent().hide();
+			}
+			
+			//改变插入音乐地址后预览
+			$("#src").change(function(){
+				var insert_preview = $("#insert_preview");
+				var insert = $("#insert");
+				if($.trim($(this).val()) == ''){
+					if( !insert.hasClass("disable-button")){
+						insert.addClass("disable-button");
+					}
+					insert_preview.hide();
+					return;
+				}
+				if( insert.hasClass("disable-button")){
+					insert.removeClass("disable-button");
+				}				
+				var m = '<embed width="290" type="mp3"  height="30" wmode="transparent"'+
+						' src="http://static.l99.com/tinyMCE/audioplayer.swf" '+
+						'flashvars="playerID=12345&soundFile='+ $("#src").val()+'">';
+				insert_preview.show().html(m);
+			});
+	
+		}
+	})();	
+
+ </script>
+</body>
+</html>

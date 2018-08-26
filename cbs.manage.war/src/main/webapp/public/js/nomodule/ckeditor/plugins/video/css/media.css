@@ -1,0 +1,76 @@
+body{padding: 0px;margin: 0;}
+*{font-family: "Microsoft Yahei";}
+#id, #name, #hspace, #vspace, #class_name, #align { width: 100px }
+#hspace, #vspace { width: 50px }
+#flash_quality, #flash_align, #flash_scale, #flash_salign, #flash_wmode { width: 100px }
+#flash_base, #flash_flashvars, #html5_altsource1, #html5_altsource2, #html5_poster { width: 240px }
+#width, #height { width: 40px }
+#src, #media_type { padding:7px 2px 7px 2px;}
+#class { width: 120px }
+#prev { margin: 0; width: 380px; height: 260px;width: 580px;height: 402px;margin:14px auto;}
+.panel_wrapper div.current { height: 420px; overflow: auto }
+#flash_options, #shockwave_options, #qt_options, #wmp_options, #rmp_options { display: none }
+.mceAddSelectValue { background-color: #DDDDDD }
+#qt_starttime, #qt_endtime, #qt_fov, #qt_href, #qt_moveid, #qt_moviename, #qt_node, #qt_pan, #qt_qtsrc, #qt_qtsrcchokespeed, #qt_target, #qt_tilt, #qt_urlsubstituten, #qt_volume { width: 70px }
+#wmp_balance, #wmp_baseurl, #wmp_captioningid, #wmp_currentmarker, #wmp_currentposition, #wmp_defaultframe, #wmp_playcount, #wmp_rate, #wmp_uimode, #wmp_volume { width: 70px }
+#rmp_console, #rmp_numloop, #rmp_controls, #rmp_scriptcallbacks { width: 70px }
+#shockwave_swvolume, #shockwave_swframe, #shockwave_swurl, #shockwave_swstretchvalign, #shockwave_swstretchhalign, #shockwave_swstretchstyle { width: 90px }
+#qt_qtsrc { width: 200px }
+iframe {border: 1px solid gray}
+
+/*video*/
+.video-context {position: relative;}
+.video-context #video_input {border:1px solid #000; width: 471px;}
+.video-context .video-loadding {display: none;height: 16px; line-height: 16px;position: absolute;top: 30px;right:14px;top: 9px;font-size:12px;color:#999;}
+.video-context .video-loadding img {vertical-align: middle;}
+.video-context .video-content {background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #999999;left:9px;position: absolute;top:29px;width: 690px;}
+.video-context .video-content ul{display: inline-block;}
+.video-context .video-content ul li {cursor: pointer;height: 64px;line-height: 64px;overflow: hidden;padding: 2px 5px;float: left;margin:2px;width: 330px;}
+.video-context .video-content ul li.graybg {background-color: #EEEEEE;}
+.video-context .video-content ul li.selected {background: none repeat scroll 0 0 #6D84B4;}
+.video-context .video-content .video-result-footer {background: none repeat scroll 0 0 #DDDDDD;height: 28px;line-height: 28px;clear: both;}
+.video-context .video-content .video-result-count {float: left;padding-left: 5px;}
+.video-context .video-result-count span {color: #FC5A0A;font-size: 12px;font-weight: bolder;padding: 0 3px;}
+.video-context .video-content .video-result-pager {float: right;padding-right: 5px;}
+.video-context .video-content .video-ret-img{float: left;width: 64px;border: 1px solid #EEEEEE;padding: 1px;text-align: center;}
+.video-context .video-content .video-ret-img img{height: 60px;width: 60px;}
+.video-context .video-content  .video-ret-content{float: left;}
+.video-context .video-content  .video-ret-title{font-size: 13px;font-weight: bold;height: 20px;line-height: 20px;overflow: hidden;width: 260px;}
+.video-context .video-content  .video-ret-desc{font-size: 11px;height: 40px;line-height: 20px;overflow: hidden;text-align: left;text-indent: 22px;width: 260px;}
+.video_preview{background: none repeat scroll 0 0 #FFFFFF;float: left;width: 640px;margin-top: 54px;padding: 0px 28px;}
+.video_preview .video_play_mark{ display: inline-block;height: 120px;position: relative;}
+.video_preview .video_play_mark .play{left: 30px;opacity: 0.8;filter:alpha(opacity=80);position: absolute;top: 30px;border:none;}
+.video_preview .close {background: url("http://static.l99.com/skin/lifeix/images/timeline/bold_delete_icon.png") no-repeat scroll 0 0 transparent;cursor: pointer;float: right;height: 16px;outline: medium none;text-indent: -9999px;width: 16px;position:relative;}
+.video_preview .post-video-wrap { height: 100%;width: 590px;text-align: center;margin: 0 auto;}
+.video_preview .icon {height: 120px;width: 120px;border: 1px solid #DDDDDD;}
+.video_preview .post_video{ position: relative;}
+.video_preview .post_video .post_video_close {position: absolute;right: -10px;top: 0px;opacity: 0.65;filter:Alpha(Opacity=65);}			
+
+.search-Video,.search-Video{width:90px;float:left;}
+.insert-Video{width:100px;float:left;}
+
+.video-context{clear:both;}
+
+ul,li{list-style:none;margin:0px;padding:0px;}
+.nav-tab{position: relative;height:44px;padding-left: 5px;}
+.nav-tab ul{float:left;margin-top:9px;}
+.tab-li{cursor:pointer;width:99px;float:left;background: url("http://static.l99.com/skin/lifeix/images/lifestation/present_icon.png") no-repeat scroll 0 0 transparent;top: 15px;display: block;float: left;height:33px;margin-left: 5px;z-index: 4000000;list-style: inside;text-align: center;line-height: 30px;font-size:12px;}
+.tab-li a{cursor:pointer;}
+li.current{height: 30px;width: 92px;margin-right: 2px;border: 1px solid #919B9C;border-bottom: none;background: white;}
+.mceActionPanel {float: right;}
+.wrap-searchVideo,.wrap-insertVideo{border-top:1px solid #919B9C;margin-top: -5px;}
+.wrap-insertVideo{height:80px;}
+.video-content{margin-top:10px;}
+
+.searchTips{padding:7px 2px;}
+.hidden{display:none;}
+.insert{color:#fff;cursor:pointer;} 
+.insert-video{padding:7px 2px;width:686px;margin: 0 auto;display: block;font-size:18px;}
+.video-title{width:64px;display:inline-block;float:left;margin:0px 5px 0 2px;padding-top:5px;}
+.text_field{width: 686px;margin-left:4px;background-image: none;border: 1px solid gray;color: #999;margin: 0;outline: 0 none;text-indent: 5px;font-size: 18px;padding: 7px 2px;display: block;height: 24px;line-height: 24px;margin:0 auto;}	
+.mceActionPanel .disable-button{color:#999;cursor:default;}
+
+#video_loading{position:absolute;left: 314px;top: 284px;display:none;}
+.insert-tip{font-size:12px;height:25px;line-height:25px;display:none;height: 38px;line-height: 50px;padding-left:10px;float:left;}
+#insert{width:71px;height:33px;border:none;background: url("http://static.l99.com/skin/public/images/lifeix_btns.png") no-repeat scroll 0 -33px transparent;color:#FFFFFF;}
+.mceActionPanel {margin-top:3px;text-align:center;height:35px;padding:0 40px;background:#fff;}

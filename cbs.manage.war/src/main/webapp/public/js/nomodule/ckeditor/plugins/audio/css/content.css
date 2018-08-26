@@ -1,0 +1,38 @@
+.mceItemLifeixVideo,.mceItemFlashVideo , .mceItemAudio , .mceItemFlash, .mceItemShockWave, .mceItemQuickTime, .mceItemWindowsMedia, .mceItemRealMedia {border:1px dotted #cc0000; background-position:center; background-repeat:no-repeat; background-color:#ffffcc;}
+.mceItemShockWave {background-image: url(../img/shockwave.gif);}
+.mceItemQuickTime {background-image:url(../img/quicktime.gif);}
+.mceItemWindowsMedia {background-image:url(../img/windowsmedia.gif);}
+.mceItemRealMedia {background-image:url(../img/realmedia.gif);}
+.mceItemaudio,.mceItemMp3{background-image:url(../img/music.png);}
+.mceItemFlash {background-image:url(../img/flash.gif);}
+.mceItemFlashVideo {background-image:url(../img/video.png);}
+.mceItemLifeixVideo {background-image:url(../img/video.png);}
+
+/*video*/
+.video-context {position: relative;}
+.video-context #video_input {-moz-border-bottom-colors: none;-moz-border-image: none;-moz-border-left-colors: none;-moz-border-right-colors: none;-moz-border-top-colors: none;border-color: -moz-use-text-color #313640 #313640;border-right: 1px solid #313640; border-style: none solid solid;border-width: medium 1px 1px;height: 58px;min-width: 580px;overflow: hidden;padding: 10px; width: 671px;}
+.video-context .video-loadding {display: none;height: 16px; line-height: 16px;position: absolute;top: 30px;right: 20px;}
+.video-context .video-loadding img {vertical-align: middle;}
+.video-context .video-search-loadding{top: 15px;}
+.video-context .video-content {background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #999999;left: 0;position: absolute;top: 41px;width: 690px;}
+.video-context .video-content ul{display: inline-block;}
+.video-context .video-content ul li {cursor: pointer;height: 64px;line-height: 64px;overflow: hidden;padding: 2px 5px;float: left;margin:2px;width: 330px;}
+.video-context .video-content ul li.graybg {background-color: #EEEEEE;}
+.video-context .video-content ul li.selected {background: none repeat scroll 0 0 #6D84B4;}
+.video-context .video-content .video-result-footer {background: none repeat scroll 0 0 #DDDDDD;height: 28px;line-height: 28px;clear: both;}
+.video-context .video-content .video-result-count {float: left;padding-left: 5px;}
+.video-context .video-result-count span {color: #FC5A0A;font-size: 12px;font-weight: bolder;padding: 0 3px;}
+.video-context .video-content .video-result-pager {float: right;padding-right: 5px;}
+.video-context .video-content .video-ret-img{float: left;width: 64px;border: 1px solid #EEEEEE;padding: 1px;text-align: center;}
+.video-context .video-content .video-ret-img img{height: 60px;width: 60px;}
+.video-context .video-content  .video-ret-content{float: left;}
+.video-context .video-content  .video-ret-title{font-size: 13px;font-weight: bold;height: 20px;line-height: 20px;overflow: hidden;width: 260px;}
+.video-context .video-content  .video-ret-desc{font-size: 11px;height: 40px;line-height: 20px;overflow: hidden;text-align: left;text-indent: 22px;width: 260px;}
+.video_preview{background: none repeat scroll 0 0 #FFFFFF;float: left;margin-top: 1px;padding: 10px 15px;width: 660px;}
+.video_preview .video_play_mark{ display: inline-block;height: 120px;position: relative;}
+.video_preview .video_play_mark .play{left: 30px;opacity: 0.8;filter:alpha(opacity=80);position: absolute;top: 30px;}
+.video_preview .close {background: url("http://static.l99.com/skin/lifeix/images/timeline/bold_delete_icon.png") no-repeat scroll 0 0 transparent;cursor: pointer;float: right;height: 16px;outline: medium none;text-indent: -9999px;width: 16px;}
+.video_preview .post-video-wrap { height: 100%;width: 590px;text-align: center;margin: 0 auto;}
+.video_preview .icon {height: 120px;width: 120px;border: 1px solid #DDDDDD;}
+.video_preview .post_video{ position: relative;}
+.video_preview .post_video .post_video_close {position: absolute;right: -10px;top: 0px;opacity: 0.65;filter:Alpha(Opacity=65);}			

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>插入/搜索视频</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/media.css" rel="stylesheet" type="text/css" />
+</head>
+<body role="application">
+	<div class="nav-tab">
+		<ul>
+			<li class="tab-li current"><a class="search-Video" id="searchVideo">搜索视频</a></li>
+			<li class="tab-li"><a class="insert-Video" id="insertVideo">插入视频</a></li>
+		</ul>
+		<span id="insert_tip" class="insert-tip">支持优酷/土豆/酷6/六间房/56网/新浪/凤凰等网站的视频地址</span>
+		<div class="mceActionPanel">
+			<input type="submit"  id="insert" name="insert" class="insert disable-button" value="插入" />
+		</div>  	
+	</div> 
+	<div class="wrap-insertVideo" style="display:none"  > 
+	   	<div class="video-content">
+	   		<input id="src_temp"  style="display:none" class="insert-video" name="src" type="text" placeholder="请输入视频地址" />
+	   		<textarea id="src" name="video.videoUrl" class="textarea_field insert-video" placeholder="请输入视频地址"></textarea>
+		<div id="prev"></div>     	
+	   	</div>
+	</div>
+	<div id="video_preview" class="video_preview" style="display:none;">
+		<a class="close" title="更换视频地址" >更换视频地址</a>
+		<div id="video_wrap" class="post-video-wrap">
+			<div title="中国人的创造力" class="post_video_thumbnail" >
+				<a href="#" class="video_play_mark" rel="http://www.l99.com/images/haibao/l99_1.swf" rev="false" videotype="" title="点击播放视频">
+					<img class="icon" src="http://static.l99.com/skin/default/images/minigame/flash_default.jpg"  />
+					<img class="play" src="http://static.l99.com/skin/lifeix/images/video/video_play_60.png" />
+				</a>
+			</div>
+			<div title="中国人的创造力" class="hidden post_video">
+				<div class="post_video_file file_mark"></div>
+				<a href="#" class="post_video_close video_close_mark" >
+					<img src="http://static.l99.com/skin/lifeix/images/timeline/guide_bg.png" />
+				</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>   
+	<div class="wrap-searchVideo" >
+		<div class="video-content">
+		   <div id="video_search_input" class="video-context"   >
+			<input id="video_search_val" class="text_field wide searchTips " type="text" maxlength="100" value="输入视频名称搜索" autocomplete="off" spellcheck="false" />
+			<div class="video-loadding text_gray9 video-search-loadding" style="display: none;">
+		     		<img src="http://static.l99.com/skin/lifeix/images/loading.gif" />&nbsp;视频搜索中...
+		     	</div>
+			<div class='video-content' style='display:none;' ></div>
+		  </div>	
+		</div>		     
+	</div>
+<script type="text/javascript" src="http://www.l99.com/js/swfobject1_5.min.js?v=20110815.js"></script>
+<script type="text/javascript" src="http://static.l99.com/js/jquery/jquery-1.4.2.min.js?v=20110808.js"></script>
+<script type="text/javascript" src="http://static.l99.com/js/jquery/json2.js?v=20110808.js"></script> 
+<script type="text/javascript" src="http://www.l99.com/js/dashboard/dashboard_play.src.js?v=20110810.js"></script>
+<script type="text/javascript" src="js/video.js"></script>
+ 		
+ 		<script type="text/javascript" >
+ 	 	 var validInsert = {search:false,insert:false}
+		 
+ 	 	 window.onload = function(){
+		 	var video_opt = {};
+		 	video_opt.searchVideo = $("#searchVideo"); 
+		 	video_opt.video_preview = $("#video_preview");
+		 	var insert_tip = $("#insert_tip");
+		 	window.focus();
+ 	 	 	//点击搜索Tab		
+			video_opt.searchVideo.click(function(){
+				var o = $(this);
+				insert_tip.hide();
+				if(o.parent().hasClass("current")){
+				  return;				
+				}			
+					
+				//修改class名标记切换
+				$(".wrap-searchVideo").show();
+				$("#insertVideo").removeClass("selected").parent().removeClass("current");
+				$(".wrap-insertVideo").hide();
+				o.addClass("selected").parent().addClass("current");
+				$("#insert").removeClass("disable-button")
+				
+				//插入视频地址，或之前搜索视频成功，继续显示视频的预览图,否则隐藏预览
+				if(validInsert.search == false){
+					video_opt.video_preview.hide();
+					$("#insert").addClass("disable-button")
+				}
+				else{
+					$("#video_search_input").hide();
+					video_opt.video_preview.show();
+				}
+			});
+			//点击插入Tab
+			$("#insertVideo").click(function(){
+				var o = $(this);
+				if(o.parent().hasClass("current")){
+				  return;				
+				}
+
+				//修改class名标记切换
+				insert_tip.show();
+				$(".wrap-insertVideo").show();
+				video_opt.searchVideo.removeClass("selected").parent().removeClass("current");
+				o.addClass("selected").parent().addClass("current");
+												
+				video_opt.video_preview.hide();
+				$(".wrap-searchVideo").hide();				
+				$("#insert").removeClass("disable-button")
+				
+				//插入视频地址不可用,disable插入按钮
+				if(validInsert.insert == false)
+					$("#insert").addClass("disable-button");
+			});		
+			
+			$("#src").videoVerifi({"searchFlag":true});
+			
+			//根据插入或搜索插入相应元素
+			$("#insert").click(function(){
+				var tab = $(".current a").attr("id");
+				if(tab == 'insertVideo'){
+					if(validInsert.insert == true)
+						insertInputVideo();
+				}
+				else if(tab == 'searchVideo'){
+					if(validInsert.search == true)
+						insertSearchVideo();
+				}
+			});
+			
+			//插入搜索视频
+			function insertSearchVideo(){
+				//insertVideo();		
+				var videoSrc = dealVideoSrc($(".video_play_mark").attr("rel"));
+				videoSrc = "\'"+ videoSrc +"\'";
+				var eleVideo = '<img width="550" height="413" wmode="transparent" data-mce-src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif"'+
+							   ' src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif" class="mceItemMedia mceItemFlash"'+
+							   ' data-mce-json="{\'type\':\'flash\',\'video\':{\'sources\':{}},\'params\':{\'allowfullscreen\':\'true\',\'src\':'+videoSrc+'},\'width\':\'550\',\'height\':\'413\',\'wmode\':\'transparent\'}" _moz_resizing="true">';
+				//eleVideo = $(eleVideo);
+				insertVideoToEditor(eleVideo);
+			};
+			
+			//插入 输入地址视频
+			function insertInputVideo(){
+				var rel = $(".video_play_mark").attr("rel");
+				if(rel == undefined)
+					return;
+				
+				var videoSrc = dealVideoSrc(rel);
+				videoSrc = "\'"+ videoSrc +"\'";
+				var eleVideo = '<img width="550" height="413" wmode="transparent" data-mce-src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif"'+
+							   ' src="http://www.l99.com/js/editor/jscripts/ckeditor/skins/moono/trans.gif" class="mceItemMedia mceItemFlash"'+
+							   ' data-mce-json="{\'type\':\'flash\',\'video\':{\'sources\':{}},\'params\':{\'allowfullscreen\':\'true\',\'src\':'+videoSrc+'},\'width\':\'550\',\'height\':\'413\'}" _moz_resizing="true">';
+				//var eleVideo = $(eleVideo);
+				insertVideoToEditor(eleVideo);			
+			}
+			//插入至编辑器
+			function insertVideoToEditor(eleVideo){
+				var editor = parent.CKEDITOR.instances.elm1;
+				editor.insertHtml(eleVideo);
+				parent.CKEDITOR.dialog.getCurrent().hide();
+				editor.focus();
+			}
+			//对视频自动播放的处理
+			function dealVideoSrc(videoSrc){
+				var swf = new RegExp('.swf'.toUpperCase());
+				if(swf.test(videoSrc.toUpperCase())) {
+					var patt = new RegExp('auto'.toUpperCase());
+					if(patt.test(videoSrc.toUpperCase())){
+						var videoSrcBar =  new Array();
+						var videoSrcDeal = new Array();
+						videoSrcBar = videoSrc.split('?');
+						videoSrcDeal = videoSrcBar[1].split('&');
+						var videoSrcPadding = '';
+						for(var i = 0; i<videoSrcDeal.length; i++){
+							if(patt.test(videoSrcDeal[i].toUpperCase())){
+								videoSrcDeal[i] = 'isAutoPlay=false&autoplay=false';
+							}
+							videoSrcPadding = videoSrcPadding + videoSrcDeal[i] + '&';
+						}
+						videoSrcPadding = videoSrcPadding.substr(0,videoSrcPadding.length-1);
+						videoSrc = videoSrcBar[0] + '?' + videoSrcPadding;
+						return videoSrc;
+					}else {
+						var videoSrcBar = videoSrc.split('?')[1];
+						if(!videoSrcBar){
+							return videoSrc;
+						}else {
+							videoSrc = videoSrc + '&isAutoPlay=false&autoplay=false';
+							return videoSrc;
+						}
+					}
+				}
+			}
+ 		}
+	    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="imUserBlock">
+
+	<!-- 以下与实体类的中字段一致 -->
+	<sql id="selectId">
+		userId,
+		userName,
+		userPath,
+		userNo,
+		blockStatu,
+		createTime,
+		removeTime
+	</sql>
+
+	<insert id="add" parameterType="com.cbs.manage.dto.im.ImUserBlock">
+		INSERT INTO
+		im_user_block(userId,userName,userPath,userNo,blockStatu,createTime,removeTime)
+		values(#{userId},#{userName},#{userPath},#{userNo},#{blockStatu},#{createTime},#{removeTime})
+	</insert>
+
+	<update id="deleteById">
+		DELETE 
+		FROM im_user_block
+		WHERE userId = #{userId}
+	</update>
+   <!-- 只需要返回禁言的 -->
+	<select id="getById" resultType="com.cbs.manage.dto.im.ImUserBlock">
+		SELECT
+		<include refid="selectId" />
+		FROM im_user_block
+		WHERE userId = #{userId}
+		AND removeTime&gt;#{removeTime}
+        ORDER BY createTime DESC
+	</select>
+
+	<select id="findImUserBlocks" resultType="com.cbs.manage.dto.im.ImUserBlock">
+		SELECT
+		<include refid="selectId" />
+		FROM im_user_block
+		<where>
+			<if test="blockStatu != null">
+				blockStatu = #{blockStatu}
+			</if>
+			<if test="startId != null">
+				createTime &lt; #{startId}
+			</if>
+			and removeTime&gt;#{removeTime}
+		</where>
+		ORDER BY createTime DESC
+		LIMIT #{limit}
+	</select>
+
+</mapper>

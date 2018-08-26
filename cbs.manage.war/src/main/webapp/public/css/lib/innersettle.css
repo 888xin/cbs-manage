@@ -1,0 +1,7 @@
+#datepicker{
+width: 250px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+.daterangepicker{margin-left: 200px;}

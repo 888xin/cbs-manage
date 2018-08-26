@@ -1,0 +1,7 @@
+/*base styles*/
+@import url("./lib/bootstrap.min.css");
+@import url("./lib/font-awesome.min.css");
+/*ace styles*/
+@import url("./lib/ace.min.css");
+@import url("./lib/ace-rtl.min.css");
+@import url("./lib/ace-skins.min.css");

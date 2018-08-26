@@ -1,0 +1,28 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+	<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"-->
+	<!--xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+        <!--http://www.springframework.org/schema/beans/spring-beans.xsd-->
+        <!--http://code.alibabatech.com/schema/dubbo-->
+        <!--http://code.alibabatech.com/schema/dubbo/dubbo.xsd-->
+        <!--">-->
+ <!---->
+	<!--&lt;!&ndash; 提供方应用信息，用于计算依赖关系&ndash;&gt;-->
+    <!--<dubbo:application name="lifeix-cbs-manage-consumer"  />-->
+    <!---->
+ 	<!--&lt;!&ndash; 默认注册中心 &ndash;&gt;-->
+    <!--<dubbo:registry protocol="zookeeper" address="${zookeeper.addrs}" client="zkclient" />-->
+    <!---->
+	<!--&lt;!&ndash; 从注册中心发现监控中心地址 &ndash;&gt;-->
+ 	<!--<dubbo:monitor protocol="registry" />-->
+    <!---->
+ 	 <!--&lt;!&ndash; service 和 protocol的缺省设置 &ndash;&gt;-->
+    <!--<dubbo:provider protocol="dubbo" version="${zookeeper.user.version}" retries="0" timeout="1000" loadbalance="leastactive"/>-->
+    <!---->
+    <!--&lt;!&ndash; 用dubbo协议在20880端口暴露服务 &ndash;&gt;-->
+    <!--<dubbo:protocol name="dubbo" port="20880" />-->
+    <!---->
+    <!--&lt;!&ndash; 设置超时 &ndash;&gt;-->
+	<!--<dubbo:consumer timeout="2000" retries="0" check="false"/>-->
+    <!---->
+<!--</beans>-->

@@ -1,0 +1,46 @@
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+	<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"-->
+	<!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd-->
+ <!--http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">-->
+
+	<!--&lt;!&ndash; 用户通用服务 &ndash;&gt;-->
+	<!--<dubbo:reference id="accountCommonAction"-->
+		<!--interface="com.lifeix.user.api.action.account.AccountCommonAction"-->
+		<!--version="1.1.0">-->
+		<!--<dubbo:method name="findAccountByIds" timeout="3000" />-->
+	<!--</dubbo:reference>-->
+
+	<!--&lt;!&ndash; 用户验证服务 &ndash;&gt;-->
+	<!--<dubbo:reference id="accountBasicAction"-->
+		<!--interface="com.lifeix.user.api.action.account.AccountBasicAction"-->
+		<!--version="1.1.0">-->
+	<!--</dubbo:reference>-->
+
+	<!--&lt;!&ndash; 用户注册服务 &ndash;&gt;-->
+	<!--<dubbo:reference id="accountV2BasicAction"-->
+		<!--interface="com.lifeix.user.api.action.account.AccountV2BasicAction"-->
+		<!--version="1.1.0">-->
+	<!--</dubbo:reference>-->
+
+	<!--&lt;!&ndash; 头像服务 &ndash;&gt;-->
+	<!--<dubbo:reference id="avatarAction"-->
+		<!--interface="com.lifeix.user.api.action.avatar.AvatarAction" version="1.1.0">-->
+	<!--</dubbo:reference>-->
+
+	<!--&lt;!&ndash; 第三方服务 &ndash;&gt;-->
+	<!--<dubbo:reference id="accountThirdAction"-->
+		<!--interface="com.lifeix.user.api.action.third.AccountThirdAction"-->
+		<!--version="1.1.0">-->
+		<!--<dubbo:method name="loginBySdk" timeout="25000" />-->
+	<!--</dubbo:reference>-->
+
+	<!--<dubbo:reference id="cbsRelationshipService"-->
+		<!--interface="com.lifeix.nyx.relationship.service.CbsRelationshipService"-->
+		<!--version="1.1.0">-->
+	<!--</dubbo:reference>-->
+
+    <!--&lt;!&ndash; 短信邮件服务 &ndash;&gt;-->
+    <!--<dubbo:reference id="smsDubboService" interface="com.lifeix.email.service.SmsDubboService" version="1.0.0" >-->
+    <!--</dubbo:reference>-->
+
+<!--</beans>-->

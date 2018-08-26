@@ -1,0 +1,16 @@
+/*base styles*/
+@import url("./lib/bootstrap.min.css");
+@import url("./lib/font-awesome.min.css");
+/*ace styles*/
+@import url("./lib/ace.min.css");
+@import url("./lib/ace-rtl.min.css");
+@import url("./lib/ace-skins.min.css");
+
+ul.im-out-ul { list-style: none; margin: 0px; padding: 0px; }
+ul.im-out-ul li { background: #eee; padding: 0px 8px; height: 26px; line-height: 26px; border-bottom: 1px solid #CCC; position:relative; float:left;}
+ul.im-out-ul li ul{ display:none; position: absolute; top: 0px; width:100px; border:1px solid #ccc; border-bottom:none; }
+ul.im-out-ul li ul.ul-left{ left: -115px; margin: 0px 5px 0px 0px;}
+ul.im-out-ul li ul.ul-rigth{left: 30px; }
+ul.im-out-ul li.current ul { display:block;}
+ul.im-out-ul li:hover ul { display:block;}
+.btn-danger{ float:right;}

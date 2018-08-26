@@ -1,0 +1,5 @@
+.user_head { width: 50px; height: 50px; }
+.comm_select, .comm_content { vertical-align: middle !important; }
+.comment_id, .comm_user, .comm_oper, .comm_time { text-align: center !important; vertical-align: middle !important; }
+.noData { text-align: center; color: #999; font-family: "Microsoft Himalaya"; font-size: 12px; }
+.modal-dialog { width: 890px; }

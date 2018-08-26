@@ -1,0 +1,116 @@
+html{-webkit-text-size-adjust:none;font-size:62.5%}
+body{color:#333;height:auto;padding-top:50px}
+header{background:#c01010;height:50px;position:fixed;width:100%;top:0;z-index:999}
+header i{display:inline-block;width:40px;height:50px;background:url(../images/go.png) center no-repeat;background-size:20px}
+header .gorule{margin:15px 15px 0 0;background:url(../images/gorule.png) no-repeat;background-size:20px}
+.head_wrap{width:160px;margin:0 auto;margin-top:7px;text-align:center;color:#fff;font-size:16px;height:36px;line-height:36px;z-index:999}
+.userPoints-warp{padding-left:10px;height:35px;line-height:35px;font-size:1.4rem;background-color:#FCE5BF;color:#e8403e}
+.userPoints-warp .uerPoints{font-size:1.6rem;font-weight:bolder}
+.exchange-warp{background:#eee}
+.exchange-warp .giftDetail-warp{text-align:center;*zoom:1}
+.exchange-warp .giftDetail-warp .giftImg{margin-right:12px;width:120px;height:120px}
+.exchange-warp .giftName{font-size:16px;font-weight:bold;color:#333;margin-right:10px}
+.exchange-warp .price{font-size:12px;font-weight:bold;color:#999}
+.exchange-warp .price span{font-size:20px;margin-right:5px;color:#e8403e}
+.orgin_price{display:block;height:25px;margin-left:30px;line-height:27px;color:#999;font-size:16px}
+.detail{font-size:14px;padding:10px;background:#fff}
+.first-page .detail{min-height:100px}
+.exchange-warp .detail >div{margin:5px 0}
+.exchange-warp .little{color:#A5A3A3}
+.exchange-warp .dec{margin:10px 0;padding:0 0 0 10px;background:#fff}
+.exchange-warp .dec p:first-child{font-size:16px;font-weight:bold;padding:10px 0;padding-bottom:0;}
+.exchange-warp .dec .giftDes{font-size:14px;font-family:'microsoft yahei';color:#7C7B7B;line-height:25px;padding-right:10px;word-break:break-all}
+.exchange-warp .dec .giftDes img{width:100%!important;height:auto!important}
+.exchange-warp .exchange-rule{background:white;padding:0 10px 60px 10px}
+.exchange-warp .exchange-rule p{font-size:10px;font-weight:bold;line-height:20px}
+.exchange-warp .exchange-rule>p{border-bottom:1px solid #eee;margin-bottom:5px;font-size:12px;height:25px;line-height:25px;color:#999}
+.center-page{position:absolute;background:#fff;width:100%;bottom:0}
+.center-page h2{float:left;display:inline-block;font-size:16px;font-weight:bold;margin-right:10px}
+.option h2{line-height:30px}
+.charge_phone{}
+.charge_phone input{width:170px;height:30px;border:1px solid #ddd;font-family:'Microsoft Yahei';font-size:16px;outline:none;text-indent:5px;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+.center-page ul li{float:left;padding:5px 10px;margin-right:10px;margin-bottom:10px;font-size:14px;border:1px solid #eee;background:#eee;border-radius:5px;background-clip:padding-box;color:#9E9A9A}
+.option>div{margin:10px 0 0 10px;padding:5px 0;border-bottom:1px solid #ddd}
+.option ul{margin-left:42px}
+.option .option_active{background:#e8403e;background-clip:padding-box;color:#fff}
+.center-page .needPoints-warp,
+.exchange-warp .exchangeNum-warp,
+.charge_phone{padding-right:12px;height:52px;line-height:52px;background:#fff;font-size:16px;margin-left:10px;border-bottom:1px solid #ddd}
+.center-page .needPoints-warp .needPoints-show,
+.exchange-warp .exchangeNum-warp .needPoints-show{float:right;color:#e8403e}
+.center-page .exchangeNum-warp{padding-right:12px;height:52px;line-height:52px;font-size:16px;margin-left:10px;border-bottom:1px solid #ddd}
+.center-page .exchangeNum-warp .numChoose{float:right;margin-top:8px;height:36px;width:110px;border:1px solid #DCDCDC;border-radius:3px}
+.center-page .exchangeNum-warp .numChoose span{float:left;display:block;height:34px;line-height:34px;text-align:center}
+.center-page .exchangeNum-warp .numChoose .numChoose-dec,
+.exchangeNum-warp .numChoose .numChoose-add{width:34px;font-size:2.5rem;background-color:#eee;color:#9E9E9E;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+.center-page .numChoose .numChoose-num{width:40px;border-left:1px solid #DBDBDB;border-right:1px solid #DBDBDB}
+.center-page .infomation{padding-top:10px;margin-left:10px;background:#fff;border-bottom:1px solid #ddd}
+.footer .nextStep-button,
+.nextStep{margin-top:50px;margin-bottom:30px;margin-left:15%;height:40px;width:70%;font-size:1.7rem;font-family:microsoft yahei;background-color:#e8403e;color:#fff;border:none;border-radius:5px;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+.fixed{width:100%;position:fixed;bottom:0;background-color:#eee}
+.fixed button{height:50px;width:100%;font-size:1.7rem;font-family:microsoft yahei;background-color:#e8403e;color:#fff;border:none;outline:0 none;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+.nextStep{margin-top:90px}
+.giftInfo-warp{padding:11px 0 11px 12px;font-size:1.6rem;background-color:#fff;border-top:1px solid #DCDCDC;border-bottom:1px solid #DCDCDC;color:#999}
+.giftInfo-warp .giftImg,
+.infomation .giftImg{float:left;margin-right:12px;width:73px;height:73px;border:1px solid #DCDCDC}
+.giftInfo-warp .giftName-warp{color:#C3BCBC;font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.giftInfo-warp .giftName-warp .giftName{width:42%;color:#333}
+.giftInfo-warp .usePoints-warp{color:#C3BCBC;font-weight:bold}
+.giftInfo-warp .usePoints-warp .usePoints-points{color:#333}
+.giftInfo-warp .detail{border:0 none}
+.giftInfo-warp .option-choose{color:#C3BCBC;font-weight:bold}
+.giftInfo-warp .option-choose span{color:#333}
+.mask{display:none;position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;overflow:hidden;z-index:1000;background:rgba(0,0,0,0.6)}
+.mask .tip-warp{position:relative;margin:150px auto 0;padding-top:30px;width:256px;text-align:center;background-color:#F8F8F8;border-radius:8px}
+.mask .tip-warp .tip{margin-left:10%;display:block;width:80%;height:50px;font-size:1.6rem;text-align:center;border-bottom:1px solid #DCDCDC}
+.mask .tip-warp .tip-confirm{width:80%;height:50px;font-size:1.6rem;color:#e8403e;border:none;background-color:transparent;-webkit-tap-highlight-color:rgba(255,0,0,0);outline:none}
+.mask2 .tip-warp{padding-bottom:51px;background:#e8403e;color:white}
+.mask2 .tip-warp .tip{border:none}
+.mask2 .tip-warp .tip-confirm{position:relative;top:105px;width:73%;height:40px;color:white;border:1px solid #fff;border-radius:5px}
+.mask2 .colorful{position:absolute;background:url('../images/f.png') no-repeat;left:0px;bottom:0;width:100%;height:160px;background-size:contain}
+.mask4 .button{margin-top:15px}
+.mask4 .tip-warp{padding-bottom:-8px}
+.mask4 .concel,
+.mask4 .confirm{height:35px;width:100px;border:0 none;background:#F8F8F8;font-size:16px;color:#e8403e;border-radius:8px}
+.mask4 .concel{color:#999}
+.address-form{width:100%;margin-top:10px;background:#fff;padding-top:5px}
+.address-form div{overflow:hidden;padding:6px 0}
+.address-form div label{display:inline-block;float:left;width:21%;padding-top:1px;text-align:right;font-size:16px;font-family:'Microsoft Yahei';color:#999}
+.address-form div p{float:left;width:72%;margin-left:20px;padding-bottom:13px;border-bottom:1px solid #dcdcdc}
+.address-form div input,
+.address-form div textarea{display:block;width:100%;margin-top:1px;border:0 none;font-family:'Microsoft Yahei';font-size:16px;outline:none;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+.address-form div textarea{height:65px;vertical-align:top}
+.address-form footer button{margin-top:100px;margin-left:15%;margin-bottom:100px;height:40px;width:70%;font-size:1.7rem;background-color:#BA74AB;color:#fff;border:none;border-radius:5px}
+.carousel{position:relative}
+.show{margin-bottom:10px}
+.giftDetail-warp{min-height:320px;background:url("../images/moren.png") center center no-repeat #eee;background-size:40%}
+.swiper-container{width:100%}
+.swiper-slide{text-align:center;background:#fff}
+.swiper-container-horizontal>.swiper-pagination{height:20px;line-height:24px;bottom:0;background:-o-linear-gradient(top,rgba(248,248,249,0.54),rgba(115,106,106,0.5));background:-moz-linear-gradient(top,rgba(248,248,249,0.54),rgba(115,106,106,0.5));background:-webkit-linear-gradient(top,rgba(248,248,249,0.54),rgba(115,106,106,0.5))}
+.swiper-pagination-bullet{background:background:#5F5A5A;opacity:.5}
+.swiper-pagination-bullet-active{background:red;opacity:1}
+.swiper-container img{width:100%}
+.singer{text-align:center;border-bottom:1px dotted #c9c9c9}
+.singer img{width:100%}
+#cke_1_contents{min-height:600px!important;}
+.goods_descri{}
+#modal_add_goods_editor{height:400px;max-height:none;border:1px solid #eee;position:relative;top:-24px;}
+.h200{/* height: 200px; */}
+.swiper-container{height:320px;}
+.shangchuan{border:0 none;}
+.f20{font-size:20px;}
+.m20{margin-top:20px;}
+.moli{width:350px;height:1000px;	/* background: red; */	/* border: 1px solid #eee; */
+
+/* border-radius: 20px; */}
+.app-header{height:70px;background:url("https://b.yzcdn.cn/v2/image/widget/showcase/iphone_head.png") no-repeat center center;}
+.mobile{width:320px;margin:0 auto;border:1px solid #eee;}
+.mobile img{width:100%;}
+.mobile_wrap{width:400px;height:800px;overflow-y:scroll;overflow-x:hidden;border:1px solid #eee;border-radius:20px;}
+.exchange-warp .dec .text_des{font-size:14px!important;font-weight:normal!important;word-break:break-all;}
+.show_img{display:inline-block;width:1000px;vertical-align:middle;}
+.show_img>div{position:relative;float:left;width:90px;margin-right:10px;height:90px;background:red;border:1px solid #eee;}
+.show_img>div img{width:100%;height:100%;}
+.show_img>div i{display:inline-block;width:20px;height:20px;line-height:20px;background:red;font-size:16px;font-weight:bold;color:#fff;border-radius:50%;padding-right:5px;text-align:center;position:absolute;right:-9px;top:-7px;}
+.good_add_left{width:950px;}
+.good_add_rigth{width:400px;}

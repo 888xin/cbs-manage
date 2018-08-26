@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="aliases">
+   <!-- 以下与实体类的中字段一致 -->
+   <sql id="selectId">
+       roleId,
+       accountId,
+       longNO,
+       name,
+       head,
+       type,
+       addTime
+   </sql>
+   <!-- 查询 -->
+   <select id="queryAll" resultType="Aliases" parameterType="Aliases">
+   	   select * from aliases
+   	   <!--<where>-->
+   	       <!--u.roleId = l.roleId-->
+   	       <!-- and u.userId=#{userId}  -->
+   	   <!--</where>-->
+   </select>
+   
+   <!-- 总页数 -->
+   <select id="count" resultType="int" parameterType="Aliases">
+   	   select count(0) from aliases
+   </select>
+   
+   <!-- 新增马甲 -->
+   <insert id="add" parameterType="Aliases">
+     insert into aliases(roleId,accountId,longNO,name,head,addTime)
+     values(#{roleId},#{accountId},#{longNO},#{name},#{head},#{addTime})
+   </insert>
+
+    <select id="find" resultType="Aliases" parameterType="Aliases">
+        select
+        <include refid="selectId" />
+        from aliases
+        where roleId = #{roleId} and accountId = #{accountId}
+    </select>
+
+    <select id="queryByRoleId" resultType="Aliases">
+        select
+        <include refid="selectId" />
+        from aliases
+        where roleId = #{roleId}
+    </select>
+
+    <delete id="deleteAliase" parameterType="Aliases">
+	    delete
+	    from aliases
+	    where roleId = #{roleId} and accountId = #{accountId}
+	</delete>
+
+    <update id="update" parameterType="Aliases">
+	    UPDATE aliases
+	    SET
+	    type = #{type}
+	    where roleId = #{roleId} and accountId = #{accountId}
+	</update>
+
+</mapper>

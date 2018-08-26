@@ -1,0 +1,8 @@
+#info_con{width:340px;background:#fff;padding-bottom:20px;line-height:26px;margin:0 auto;border:1px solid #ddd;border-radius:30px;}
+.app-header{text-align:center;margin-bottom:18px;padding:14px 0;background:#3A3838;border-top-left-radius:30px;border-top-right-radius:30px;}
+#info_con img{max-width:100%;max-height:100%;}
+#info_con p.con_title{font-size:16px;padding:0 10px;text-align:center;}
+#info_con .con_main{padding:0 10px;}
+#info_con p.con_time{font-size:12px;color:#bbb;text-align:center;margin-bottom:15px;}
+#info_con .con_btn{display:block;width:100px;height:30px;line-height:30px;text-align:center;text-decoration:none;margin:0 auto;background:#eb0000;color:#fff;margin-top:50px;border-radius:3px;}
+.none{visibility:hidden;}

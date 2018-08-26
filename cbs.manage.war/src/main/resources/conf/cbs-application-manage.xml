@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+ 			">
+
+
+    <context:property-placeholder location="classpath:conf/ds.conf,classpath:conf/settings.properties"/>
+
+    <context:component-scan base-package="com.cbs.manage.security"/>
+
+    <import resource="classpath:conf/cbs-manage-spring-dao.xml" />
+    <import resource="classpath:conf/cbs-manage-spring-service.xml" />
+	<import resource="classpath:conf/cbs-manage-spring-security.xml" />
+	
+	<!--<import resource="classpath:conf/cbs-manage-spring-user-dubbo.xml" />-->
+	<!--<import resource="classpath:conf/tiyu-community-dubbo.xml" />-->
+	<!--<import resource="classpath:conf/lifeix-cbs-manage-consumer.xml" />-->
+
+    <bean id="applicationInit" class="com.cbs.manage.common.ApplicationInit" init-method="init">
+        <property name="cbsNewApiUri" value="${cbs.new.api.url}" />
+        <property name="imageApiUri" value="${image.center.url}" />
+		<property name="imUri" value="${im.host}"></property>
+		<property name="debug" value="${debug}"></property>
+		<property name="postUserIds" value="${cbs.community.post.add.userids}" />
+    </bean>
+
+
+</beans>

@@ -1,0 +1,27 @@
+.result_contest .contest_info { text-align: center; font-size: 12px; margin: 10px 50px }
+.result_contest .team { max-width: 105px; text-align: center }
+.result_contest .team_host { float: left }
+.result_contest .team_away { float: right }
+.result_contest .team p { font-size: 13px; margin: 0; margin-top: 5px; line-height: 13px }
+.result_contest .team img { max-width: 30% }
+.result_contest .contest_info .versus { font-size: 14px }
+.result_contest { line-height: 12px; min-width: 260px; overflow: hidden }
+.contest_info p { margin: 5px 0px }
+td:nth-child(3) { width: 250px }
+td:nth-child(3) .info { text-align: left }
+.info p { margin: 0; font-size: 13px }
+.gray { color: gray; display: inline-block; width: 70px; text-align: right }
+th, td { text-align: center }
+.jiesuan { text-align: left }
+td { vertical-align: middle !important }
+.name { display: inline-block; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle }
+#datepicker.dateSpecial { width: 250px; display: inline-block; vertical-align: bottom; margin-left: 10px }
+#datepicker.dateSpecial .daterangepicker { margin-left: 260px }
+.daterangepicker { width: 600px }
+.player_id {
+	width: 20%;
+}
+
+.list-info{list-style:none;padding:0;margin:0;}
+.list-info .title{width:80px; display:block;float:left;text-align:right;font-size:12px;white-space: nowrap;overflow: hidden;}
+.list-info .value{width:120px; display:block;float:left;text-align:left;font-size:12px; font-weight:bolder; white-space: nowrap;overflow: hidden;}

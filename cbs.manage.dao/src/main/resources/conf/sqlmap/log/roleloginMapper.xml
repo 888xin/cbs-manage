@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="rolelogin">
+   <!-- 以下与实体类的中字段一致 -->
+   <sql id="selectId">
+       loginId,
+       loginName,
+       loginTime,
+       loginIP
+   </sql>
+
+    <!--resultType="Resources" 每返回一条结果封装到Resources里 -->
+    <select id="query" resultType="RoleLogin" parameterType="java.util.HashMap">
+        select
+        <include refid="selectId" />
+        from rolelogin
+        order by loginId desc
+    </select>
+
+   <!-- 总页数 -->
+   <select id="count" resultType="int" parameterType="RoleLogin">
+   	   select count(0) from rolelogin
+   </select>
+   
+   <!-- 新增用户登陆记录 -->
+   <insert id="add" parameterType="RoleLogin">
+     insert into rolelogin(loginName,loginIP)
+     values(#{loginName},#{loginIP})
+   </insert>
+</mapper>

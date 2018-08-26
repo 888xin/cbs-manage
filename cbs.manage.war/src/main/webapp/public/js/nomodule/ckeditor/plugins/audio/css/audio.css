@@ -1,0 +1,115 @@
+body{padding:0px;margin:0px;}
+*{font-family: "Microsoft Yahei";}
+#id, #name, #hspace, #vspace, #class_name, #align { width: 100px }
+#hspace, #vspace { width: 50px }
+#flash_quality, #flash_align, #flash_scale, #flash_salign, #flash_wmode { width: 100px }
+#flash_base, #flash_flashvars, #html5_altsource1, #html5_altsource2, #html5_poster { width: 240px }
+#width, #height { width: 40px }
+#src, #media_type {width:627px;padding: 7px 2px;margin:6px 0 0 10px;border: 1px solid #BBB;	font-size: 18px;}
+#class { width: 120px }
+#prev { margin: 0; width: 590px;height: 181px;overflow: auto }
+.panel_wrapper div.current { height: 270px; overflow: auto }
+#flash_options, #shockwave_options, #qt_options, #wmp_options, #rmp_options { display: none }
+.mceAddSelectValue { background-color: #DDDDDD }
+#qt_starttime, #qt_endtime, #qt_fov, #qt_href, #qt_moveid, #qt_moviename, #qt_node, #qt_pan, #qt_qtsrc, #qt_qtsrcchokespeed, #qt_target, #qt_tilt, #qt_urlsubstituten, #qt_volume { width: 70px }
+#wmp_balance, #wmp_baseurl, #wmp_captioningid, #wmp_currentmarker, #wmp_currentposition, #wmp_defaultframe, #wmp_playcount, #wmp_rate, #wmp_uimode, #wmp_volume { width: 70px }
+#rmp_console, #rmp_numloop, #rmp_controls, #rmp_scriptcallbacks { width: 70px }
+#shockwave_swvolume, #shockwave_swframe, #shockwave_swurl, #shockwave_swstretchvalign, #shockwave_swstretchhalign, #shockwave_swstretchstyle { width: 90px }
+#qt_qtsrc { width: 200px }
+iframe {border: 1px solid gray}
+
+
+/*post*/
+#left_column .music-type-warp{width: 100%;}
+#left_column .music-type-warp .music-type {color: #FFFFFF; font-size: 14px; margin: 10px 0 0; width: 100%; float: left;font-size: 16px;}
+#music_xiami{position: relative;clear:both;}
+#music_xiami .music-search{border: 1px solid #BBBBBB; color: #333333;  font-size: 18px; line-height: 20px; outline: medium none; padding: 7px 2px; width: 627px;margin: 6px 0 0 10px;}
+#music_xiami .music-preview {background: none repeat scroll 0 0 #FFFFFF; padding: 55px; padding-left:70px;width:606px; float: left;margin:44px !important 0 0 20px ;}
+#music_xiami .music-preview .close {background: url("http://static.l99.com/skin/lifeix/images/timeline/bold_delete_icon.png") no-repeat scroll 0 0 transparent; float: right; height: 16px;outline: medium none;text-indent: -9999px;width: 16px; cursor: pointer;}
+#music_xiami .music-loadding{top:17px;*top:15px;position:absolute;left:600px;height: 16px;line-height: 16px;display: none;}
+#music_xiami .music-loadding img{vertical-align:middle;}
+.music-content{width: 631px;background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #999999;position: absolute;top:26px;*top:43px;left:0px;word-break: break-all;	word-wrap:break-word;}
+.music-content .music-result-footer{background: none repeat scroll 0 0 #DDDDDD; height: 28px;line-height: 28px;}
+.music-content .music-result-footer .music-result-count{float: left;padding-left: 5px;}
+.music-content .music-result-footer .music-result-pager{float: right;padding-right: 5px;}
+.music-content ul li {font-size: 14px !important; height: 28px !important;line-height: 28px !important;padding: 0 5px; cursor: pointer;overflow:hidden;}
+.music-content ul li .music-song{font-size: 14px !important;height: 28px !important;line-height: 28px !important;padding: 0 5px;}
+.music-content ul li span{font-size: 14px !important;line-height: 28px !important;}
+.music-content ul li .music-song{color: #333333;padding-right: 10px}
+.music-content ul li .separator{color: #CCCCCC;}
+.music-content ul li .music-artist{color: #999999;padding-left: 10px;}
+.music-content ul li.selected {background: none repeat scroll 0 0 #6D84B4;}
+/*view*/
+.post_music {clear: both;width: 590px; height: 100px;background: url("http://static.l99.com/skin/public/images/timeline_icon_content.png") -92px -20px no-repeat transparent;}
+.post_music_simple{background: none;}
+.post_music .icon {width: 100px;height: 100px;float: left;}
+.post_music .player, .post_music_simple .player{float: left;background:url("http://static.l99.com/skin/public/images/timeline_icon_content.png") no-repeat scroll -92px -128px transparent;height: 33px;width: 257px;cursor: pointer;}
+.post_music .player a, .post_music_simple a {display: block;height: 33px;line-height: 33px;overflow: hidden;padding: 0 40px;text-decoration: underline;color: #333333;}
+.post_music .player-single {margin: 40px 0 0 43px;text-indent:0}
+
+.quesVoteXXX{padding:20px 0 0 30px;margin-top:10px;border-top:1px #dddddd solid;}
+.bar_bt{padding-top:20px;}
+/*list*/
+#music_list_box{margin:0;clear: both;height: 700px; }
+.music-list-content{background:url("http://static.l99.com/skin/lifeix/images/lifestation/music_listbg.gif") 0 0 no-repeat;}
+.music-list{height:42px;clear: both;}
+.music-title{width:100px;height:100%;float:left;}
+.music-title input{margin: 13px;}
+.music-body{width:400px;height:100%;float:left;clear:none;padding: 5px 0 0 5px;}
+.music-body a:hover{color:#999999}
+.music-page{height:30px;line-height:30px;float:right;margin-right:20px;}
+.music-operate{width:130px;height:100%;float:right;line-height:40px;}
+.music-operate a{margin:0 8px;}
+.music-droparea{position:absolute;width:100px;cursor:move;height:60px;background:url("http://static.l99.com/skin/lifeix/images/lifestation/musicdrop.png") no-repeat;top:-10px;}
+.drop_down{background-position:-100px 0px;top:-8px;left:-2px;}
+.musiccontrol{height:30px;line-height:30px;width:250px;padding-right:8px;}
+.lst_musicfrom{height:25px;padding:0 20px 10px 20px;height:30px;line-height:25px;margin:0 auto;background:#ffffff;}
+.lst_musicfrom .lst_from{margin:0 auto;float:none;}
+.music-number-tip{color: #EEEEEE;}
+.music-number-tip .music-number{color: #FC5A0A;margin: 0 5px;}
+.lst_rightbox .manage_rightbox {background-color: #FFFFFF;float: right;font-size: 20px;font-weight: bold;height: 745px;margin-top: 10px;padding: 5px 0 0;width: 280px;}
+.lst_rightbox .manage_rightbox li {list-style-type: circle;margin: 10px 0 10px 30px;padding: 10px;}
+/*reblog*/
+.app_reblog_pk_view{width: 590px;overflow:hidden; zoom:1; }
+.app_reblog_pk_view .app_reblog_pk_cont{float:left; display:inline; text-align:center; width: 200px;}
+.app_reblog_pk_view .app_reblog_pk_cont .pk_img_link{width:140px; height:140px; border:1px solid #CCCCCC; text-align:center;display: inline;background:url("http://static.l99.com/skin/PK/images/cube_wait_140.gif") 0 0 no-repeat;}
+.app_reblog_pk_view .app_reblog_pk_cont .pk_img_link img{width: 140px;height: 140px}
+.app_reblog_pk_view .app_reblog_pk_vote{width: 50px;float:left; line-height:45px; font-size:18px; text-align:center; color:#333333;}
+.app_reblog_pk_view .app_reblog_pk_vote a{white-space:nowrap;}
+.app_reblog_pk_view .app_reblog_pk_music{float:left; display:inline; width: 260px;}
+.app_reblog_pk_view .app_reblog_pk_music .player {background: url("http://static.l99.com/skin/public/images/timeline_icon_content.png") no-repeat scroll -92px -128px transparent;cursor: pointer;float: left;height: 33px;width: 257px;margin-top: 10px;}
+.app_reblog_pk_view .app_reblog_pk_music .player a{display: block;height: 33px;line-height: 33px;overflow: hidden;padding: 0 40px;text-decoration: underline;color: #333333;}
+.app_reblog_pk_view .app_reblog_pk_music .app_reblog_pk_music_vote{width: 260px;float:left; line-height:45px; font-size:18px; text-align:center; color:#333333;}
+.app_reblog_pk_view .app_reblog_pk_logo{float:left; width:70px; height:140px; background:url(/skin/lifeix/images/app_reblog_pk.png) no-repeat center;}
+
+ul,li{list-style:none;margin:0px;padding:0px;}
+.nav-tab{position: relative;height:44px;padding-left:6px;}
+.nav-tab ul{float:left;margin-top:9px;}
+.tab-li{width:99px;float:left;background: url("http://static.l99.com/skin/lifeix/images/lifestation/present_icon.png") no-repeat scroll 0 0 transparent;top: 15px;display: block;float: left;height:33px;margin-left: 5px;z-index: 4000000;list-style: inside;text-align: center;line-height: 30px;}
+li.current{height: 30px;width: 92px;margin-right: 2px;border: 1px solid #919B9C;border-bottom: none;background: white;}
+.search-music,.insert-audio{cursor:pointer;font-size:12px;text-algin:center;display:inline-block;width:90px;}
+.music-insert{float:right;}
+.mceActionPanel{float:right;}
+.pannel-searchMP3{height: 270px;margin-top: -5px;}
+.formAudio{float:left;}
+
+.pannel-insertMusic{margin-top: -5px;height:270px;}
+.wrap-insertMusic{position: relative;clear: both;}
+
+#music_xiami,.wrap-insertMusic{margin:13px 0 0 0px;}
+.pannel-searchMP3,.pannel-insertMusic{border-top: 1px solid #919B9C;padding-left:12px;}
+#music_xiami .music-search,#src{margin: 6px 0 0 0px;}
+
+.music-tip{font-size:16px;}
+.wrap_music_search{position:relative;display: inline;}
+#insert {
+    background: url("http://static.l99.com/skin/public/images/lifeix_btns.png") no-repeat scroll 0 -33px transparent;
+    border: medium none;
+    height: 33px;
+    width: 71px;
+    color: #FFFFFF;
+    margin: 0 23px 0 0;
+}
+.text_gray9 {color: #999;font-size: 12px;}
+.insert-preview{padding: 62px 0 10px 71px;}
+.mceActionPanel .disable-button{color:#999;cursor:default;}

@@ -1,0 +1,9 @@
+.choose{margin-bottom: 20px;overflow: hidden;}
+.select{float: left;margin-left: 50px;}
+.date{float: left;width: 100px}
+.noData{text-align: center; color: #999;font-size: 'microsoft yahei'}
+#datepicker{position: absolute;  width: 100px;}
+.check{display: inline-block; width:400px;}
+ .none{display: none;}
+ .lab_long{float:left; margin-left:250px;}
+ .daterangepicker {width:565px;}

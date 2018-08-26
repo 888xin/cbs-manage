@@ -1,0 +1,99 @@
+.table1 {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.table1 thead > tr > th, .table1 tbody > tr > th, .table1 tfoot > tr > th, .table1 thead > tr > td, .table1 tbody > tr > td, .table1 tfoot > tr > td {
+    padding: 1px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd
+}
+
+.table1 thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd
+}
+
+.table1 caption + thead tr:first-child th, .table1 colgroup + thead tr:first-child th, .table1 thead:first-child tr:first-child th, .table1 caption + thead tr:first-child td, .table1 colgroup + thead tr:first-child td, .table1 thead:first-child tr:first-child td {
+    border-top: 0
+}
+
+.table1 tbody + tbody {
+    border-top: 2px solid #ddd
+}
+
+.table1 .table1 {
+    background-color: #fff
+}
+
+.table1 > thead > tr > td.active, .table1 > tbody > tr > td.active, .table1 > tfoot > tr > td.active, .table1 > thead > tr > th.active, .table1 > tbody > tr > th.active, .table1 > tfoot > tr > th.active, .table1 > thead > tr.active > td, .table1 > tbody > tr.active > td, .table1 > tfoot > tr.active > td, .table1 > thead > tr.active > th, .table1 > tbody > tr.active > th, .table1 > tfoot > tr.active > th {
+    background-color: #f5f5f5
+}
+
+.table1 > thead > tr > td.success, .table1 > tbody > tr > td.success, .table1 > tfoot > tr > td.success, .table1 > thead > tr > th.success, .table1 > tbody > tr > th.success, .table1 > tfoot > tr > th.success, .table1 > thead > tr.success > td, .table1 > tbody > tr.success > td, .table1 > tfoot > tr.success > td, .table1 > thead > tr.success > th, .table1 > tbody > tr.success > th, .table1 > tfoot > tr.success > th {
+    background-color: #dff0d8;
+    border-color: #d6e9c6
+}
+
+.table1 > thead > tr > td.danger, .table1 > tbody > tr > td.danger, .table1 > tfoot > tr > td.danger, .table1 > thead > tr > th.danger, .table1 > tbody > tr > th.danger, .table1 > tfoot > tr > th.danger, .table1 > thead > tr.danger > td, .table1 > tbody > tr.danger > td, .table1 > tfoot > tr.danger > td, .table1 > thead > tr.danger > th, .table1 > tbody > tr.danger > th, .table1 > tfoot > tr.danger > th {
+    background-color: #f2dede;
+    border-color: #eed3d7
+}
+
+.table1 > thead > tr > td.warning, .table1 > tbody > tr > td.warning, .table1 > tfoot > tr > td.warning, .table1 > thead > tr > th.warning, .table1 > tbody > tr > th.warning, .table1 > tfoot > tr > th.warning, .table1 > thead > tr.warning > td, .table1 > tbody > tr.warning > td, .table1 > tfoot > tr.warning > td, .table1 > thead > tr.warning > th, .table1 > tbody > tr.warning > th, .table1 > tfoot > tr.warning > th {
+    background-color: #fcf8e3;
+    border-color: #fbeed5
+}
+
+
+.label-event {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em
+}
+
+.selected1 {
+    background-color: #eff4f7;
+    border-color: #fff #e2eaf2;
+}
+
+.selected2 {
+    background-color: #a2c7f7;
+    border-color: #fff #e2eaf2;
+}
+
+.nav-search1 {
+    position: absolute;
+    top: 2px;
+    right: 110px;
+    line-height: 24px
+
+}
+td.contain{
+	width:15%;
+	word-wrap: break-word;
+    word-break: break-all;
+}
+td.inform_reason{
+	width:15%;
+	word-wrap: break-word;
+    word-break: break-all;
+}
+td.sub{
+	width:10%;
+}
+td.imContain{
+	width:30%;
+	word-wrap: break-word;
+    word-break: break-all;
+}
+.yy-wrap{display: block; float: left; width: 80%;}
+.yy-wrap .col-md-10{width: 100%;margin: 2px 0;}

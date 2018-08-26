@@ -1,0 +1,61 @@
+*{font-family:"Microsoft Yahei";margin:0;padding:0;font-size:12px}
+body{margin:0 auto;text-align:center}
+ul li{list-style:none;margin:0;padding:0}
+a{color:#3C78B3;font-size:12px;text-decoration:none}
+#article_insert_body{width:590px;height:560px;margin:0 auto;position:relative}
+.photo_menu{height:40px;list-style:none;margin:0;padding:4px 0 0 10px}
+.photo_menu li{float:left;width:98px;list-style:none;display:inline;height:32px;position:relative;text-align:center;text-indent:-4px;line-height:40px;margin-right:15px;background:url("http://static.l99.com/skin/lifeix/images/lifestation/present_icon.png") no-repeat scroll 0 0 transparent}
+.photo_menu li.on{float:left;text-align:center;position:relative;background-color:#FFFFFF;background-image:none;border-color:#999999 #999999 -moz-use-text-color;line-height:30px;height:30px;border-width:1px 1px medium;border-style:solid solid none}
+.article_insert_box{border:1px solid #999999;margin-top:-10px;float:left;min-height:480px;height:530px;width:99%}
+.hidden{display:none}
+#take_upload,#take_website{width:99%;float:left;height:100%;padding:0 3px}
+.upload_title{height:35px;width:100%;line-height:35px;padding:10px 0;border-bottom:2px dotted #999999}
+.article_insert_care{font-size:12px;text-align:left;float:left;margin-left:10px}
+.button.gray_btn{*width:63px}
+.gray_btn{display:inline-block;height:33px;font-size:12px;line-height:30px;color:#333333;background:none;border:none}
+.gray_btn_left{float:left;display:inline-block;height:33px;width:15px;background:url("http://static.l99.com/skin/public/images/lifeix_btn.png") 0 -66px no-repeat}
+.gray_btn_mid{float:left;display:inline-block;height:33px;line-height:30px;background:url("http://static.l99.com/skin/public/images/lifeix_btn.png") 0 -99px repeat-x}
+.gray_btn_right{float:left;display:inline-block;height:33px;width:18px;background:url("http://static.l99.com/skin/public/images/lifeix_btn.png") -12px -66px no-repeat}
+.photo_upload_box{text-align:left}
+.photo_up_flash_fieldset{min-height:40px;margin:5px 10px auto;width:560px;padding:5px 0}
+.photo_up_down_num{height:10px}
+table.properties tr{height:30px}
+table.properties tr td.column1{width:100px;text-align:center}
+table.properties tr td input{width:300px;height:25px;line-height:25px}
+#netimg img{border:1px solid #999;padding:2px;margin:2px}
+.insert-button{float:right;position:relative;bottom:35px;right:-4px;width:81px}
+.netimg-show{text-align:center;padding-top:20px}
+.tac{text-align:center}
+.photo_upload_opt_help{text-indent:10px;font-size:14px;text-align:left;height:35px;line-height:35px;color:#999}
+.text_orange{color:#FC5A0A}
+.mr5{margin-right:5px}
+.ml5{margin-left:5px}
+.text-blue{margin-left:5px}
+#context_photo_upload{min-height:265px;padding:10px;background-color:#fff;font-size:14px;color:#999}
+#context_photo_upload .fileinput{opacity:0;filter:alpha(opacity=0);cursor:pointer;position:absolute;height:33px}
+#context_photo_upload .drag-wrapper-pre .fileinput{left:0px;top:0px;height:46px}
+#context_photo_upload .drag-wrapper-pre .upload-add-wrapper{position:relative;width:170px;height:46px;margin:30px auto;overflow:hidden}
+#context_photo_upload .drag-wrapper-pre .upload-add-wrapper .upload_add{width:170px;height:46px;margin:0 auto;overflow:hidden;cursor:pointer;text-align:center;text-indent:40px;line-height:40px;color:#FFFFFF;font-size:18px;background:url(http://static.l99.com/skin/lifeix/images/dashboard/post_icon_set.png) no-repeat scroll 0px -680px transparent}
+#context_photo_upload .drag-wrapper-next .img-list-wrapper{margin:0 auto;padding:25px 0;overflow:hidden;margin-right:-12px;zoom:1}
+#context_photo_upload .drag-wrapper-next .img-list,#context_photo_upload .drag-wrapper-next .img-add{width:104px;height:104px;border:1px solid #DDD;margin-right:7px;margin-bottom:25px;position:relative;float:left;text-align:center;zoom:1;background-color:#EEE;overflow:hidden}
+#context_photo_upload .drag-wrapper-next .img-list .img-progress-start{width:100%;height:100%;background:url("http://static.l99.com/skin/townfile/images/loading_pic.gif") no-repeat scroll center center transparent;line-height:180px;font-size:12px}
+#context_photo_upload .drag-wrapper-next .img-list .img-progress-error{line-height:120px;color:#fc5a0a}
+#context_photo_upload .drag-wrapper-next .img-list .photo_bigger_mark img{width:104px;height:104px;display:inline-block;overflow:hidden;transition:all 0.5s ease 0s}
+#context_photo_upload .drag-wrapper-next .img-list .photo-control{position:absolute;top:0;left:0;width:100%;height:24px;background:rgba(255,255,255,0.6);filter:alpha(opacity=60)}
+#context_photo_upload .drag-wrapper-next .img-list .photo-control a{display:inline-block;margin-left:5px}
+#context_photo_upload .drag-wrapper-next .img-list .control_btn{width:20px;height:20px;background:url("http://static.l99.com/skin/lifeix/images/dashboard/post-photo-icon.png") no-repeat scroll 0 0 transparent}
+#context_photo_upload .drag-wrapper-next .img-list .left_mark{right:55px;background-position:-36px 0px}
+#context_photo_upload .drag-wrapper-next .img-list .right_mark{right:25px;background-position:-64px 0px}
+#context_photo_upload .drag-wrapper-next .img-list .delete{right:0px;background-position:-90px 0px}
+#context_photo_upload .drag-wrapper-next .img-list .edit_mark{right:80px;background-position:-12px 0}
+#context_photo_upload .drag-wrapper-next .img-list .photo-info{position:absolute;left:1px;bottom:2px;width:100%;height:20px;font-size:12px}
+#context_photo_upload .drag-wrapper-next .img-list .photo-info-num{float:left;width:20px;padding:2px;background:rgba(255,255,255,0.6);filter:alpha(opacity=60)}
+#context_photo_upload .drag-wrapper-next .img-list .photo-info-desc{float:right;width:80px;overflow:hidden;margin-right:2px;padding:2px;background:rgba(255,255,255,0.6);filter:alpha(opacity=60);white-space:nowrap;text-overflow:ellipsis;color:#333}
+#context_photo_upload .drag-wrapper-next .img-add .upload_add{width:100%;height:33px;margin-top:43px;overflow:hidden;color:#FFF;cursor:pointer}
+#context_photo_upload .drag-wrapper-next .img-add .fileinput{left:0px;top:43px}
+#context_photo_upload .drag-wrapper-next .img-add .blue_btn_mid{width:87px}
+#context_photo_upload .drag-wrapper-next .photoarray-info{margin-top:20px}
+#context_photo_upload .drag-wrapper-next .photoarray-title input{width:625px;margin-bottom:15px;padding:7px 5px;border:1px solid #ddd;font-size:14px;color:#999}
+#context_photo_upload .drag-wrapper-next .photoarray-desc textarea,#context_photo_upload .drag-wrapper-next .photo-single-desc textarea{width:615px;padding:7px 10px;border:1px solid #ddd;height:230px;font-size:14px;color:#999}
+#context_photo_upload .left_mark{right:62px;background-position:-100px 0}
+#context_photo_upload .right_mark{right:30px;background-position:-125px 0}

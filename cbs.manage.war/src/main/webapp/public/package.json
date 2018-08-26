@@ -1,0 +1,14 @@
+{
+  "name": "ImageFactory",
+  "version": "1.0.0",
+  "author": "yinshawnRao",
+  "description": "a Image mixin by Canvas",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-cmd": "^0.4.6",
+    "gulp-uglify": "^1.4.1"
+  }
+}

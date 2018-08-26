@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!-- 给实体Bean一个别名-->
+        <typeAlias type="com.cbs.manage.dto.role.Resources" alias="Resources"/>
+        <typeAlias type="com.cbs.manage.dto.role.Role" alias="Role"/>
+        <typeAlias type="com.cbs.manage.dto.role.Aliases" alias="Aliases"/>
+        <typeAlias type="com.cbs.manage.dto.log.RoleLogin" alias="RoleLogin"/>
+    </typeAliases>
+</configuration>
